@@ -1,4 +1,5 @@
 import random
+import os
 
 while True:
     rock = '''
@@ -54,6 +55,8 @@ while True:
       else:
         print("Rock smashes scissors! You lose.")
 
-#    play_again = input("Play again? (y/n):")
-#    if play_again.lower() != "y":
-#        break
+    play_again = input("Play again? (Enter/y/n):")
+    clear = lambda: os.system('clear')
+    clear()
+    if play_again.lower() == "n":
+        break
